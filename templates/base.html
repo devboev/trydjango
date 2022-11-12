@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel = 'stylesheet' href='{% static "recipes/recipes-htmx.css" %}'/>
+</head>
+<body>
+    <h1>Hello World</h1>
+    {% include  'search/search-form.html'%}
+    {% block content %}
+    {% endblock content %}
+    <script src="https://unpkg.com/htmx.org@1.8.2"></script>
+    <script >
+        document.body.addEventListener("htmx:configRequest",(event)=>{
+            event.detail.headers['X-CSRFToken']='{{csrf_token}}'
+        });
+       
+        htmx.on('#image-upload-form', 'htmx:xhr:progress', function(evt) {
+            htmx.find('#image-upload-progress').setAttribute('value', evt.detail.loaded/evt.detail.total * 100)
+        });
+
+    </script>  
+</body>
+</html>

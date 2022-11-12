@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'recipes/partials/image-upload-form.html'%}
+    
+<p><a href = {% url 'recipes:list' %}><< return to list</a></p>
+{% endblock content %}

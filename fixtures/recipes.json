@@ -1,0 +1,76 @@
+[
+{
+    "model": "recipes.recipe",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "name": "Grilled Chicken taco's",
+        "description": "This is my description",
+        "directions": "This are my directions to make Grilled Chicken Pasta",
+        "timestamp": "2022-10-29T06:25:35.038Z",
+        "updated": "2022-10-30T07:24:05.152Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "name": "new Recipe",
+        "description": "sdsdjk ggffjgkg kjfgfg jfg",
+        "directions": "fggf gffdgfg fgfghgfh hghgh gh uuuy yuyu yuyuu yu",
+        "timestamp": "2022-10-29T12:29:11.775Z",
+        "updated": "2022-10-30T13:17:29.362Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 1,
+    "fields": {
+        "recipe": 1,
+        "name": "chicken",
+        "description": "dffd",
+        "quantity": "4",
+        "quantity_as_float": 4.0,
+        "unit": "oz",
+        "directions": "",
+        "timestamp": "2022-10-29T06:30:09.978Z",
+        "updated": "2022-10-29T10:10:42.310Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 2,
+    "fields": {
+        "recipe": 1,
+        "name": "taco",
+        "description": "",
+        "quantity": "1/4",
+        "quantity_as_float": 0.25,
+        "unit": "kg",
+        "directions": "",
+        "timestamp": "2022-10-29T09:03:24.940Z",
+        "updated": "2022-10-29T09:03:24.940Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 3,
+    "fields": {
+        "recipe": 2,
+        "name": "weat",
+        "description": null,
+        "quantity": "38",
+        "quantity_as_float": 38.0,
+        "unit": "ounces",
+        "directions": null,
+        "timestamp": "2022-10-30T12:21:36.729Z",
+        "updated": "2022-10-30T13:17:29.638Z",
+        "active": true
+    }
+}
+]

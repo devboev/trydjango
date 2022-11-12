@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style = "margin-top:30px">
+
+    <h3>New Article</h3>
+    {% if not created %}
+
+        <form method = "POST" action = '.'>
+            {% csrf_token %}
+            {{form.as_p}}
+            <div style = "margin-top:10px"><button type="submit" >create article</button></div>
+        </form>
+    {% else %}
+        Your article was created:
+        <a href ='{{article_object.get_absolute_url}}' >{{article_object.title}}-{{article_object.slug}}</a>
+    {% endif %}    
+    <p><a href = {% url 'articles:home' %}><< return to list</a></p>
+</div>
+
+{% endblock content %}

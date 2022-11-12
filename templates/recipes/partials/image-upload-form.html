@@ -1,0 +1,16 @@
+
+<div style = "margin-top:30px">
+    <form id="image-upload-form" method = "POST" action = '.'
+        hx-post = "{{request.path}}",
+        hx-encoding = "multipart/form-data"
+    >
+        {% csrf_token %}
+        {{form.as_p}}
+        <div>
+            <progress id ="image-upload-progress" value='0' max='100'></progress>
+        </div>
+        <div style = "margin-top:10px"><button type="submit" >Upload Image</button></div>
+    </form>
+    
+</div>
+

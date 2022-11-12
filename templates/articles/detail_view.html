@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if article %}
+<h3>{{article.title}}</h3>
+    <p>
+        {{article.content}}
+    </p>
+    {% else %}
+    <h1>Article content not found!</h1>
+{% endif%}
+<p><a href = {% url 'articles:home' %}><-return to list</a></p>
+{% endblock content %}

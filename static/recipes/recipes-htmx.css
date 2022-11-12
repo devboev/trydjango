@@ -1,0 +1,14 @@
+.html-indicator{
+    display:none;
+}
+.htmx-request .html-indicator{ 
+    display:inline;
+}
+.htmx-inverted-indicator
+{ 
+    display:inline;
+}
+.htmx-inverted-indicator .html-indicator
+{ 
+    display:none;
+}
